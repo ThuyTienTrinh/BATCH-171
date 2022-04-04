@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLE</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            border-color: green;
+        }
+        td,th {
+            padding: 10px 50px;
+        }
+        tr{transition: all 1.5s;}
+        tr:nth-child(1) {
+            background-color: green;
+            color: white;
+        }
+        /* tr:nth-child(even) {
+            background-color: aquamarine;
+        } */
+        /* td:nth-child(2) {
+            background-color: violet;
+        } */
+        tr:hover{
+            background-color: aquamarine;
+            transform: scale(1.01);
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>ST01</td>
+            <td>Tienttt</td>
+            <td>29</td>
+        </tr>
+        <tr>
+            <td>ST02</td>
+            <td>Hoa</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>ST03</td>
+            <td>Nam</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>ST04</td>
+            <td>Khanh</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td>ST05</td>
+            <td>Kieu</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>ST06</td>
+            <td>Oanh</td>
+            <td>20</td>
+        </tr>
+    </table>
+</body>
+</html>
