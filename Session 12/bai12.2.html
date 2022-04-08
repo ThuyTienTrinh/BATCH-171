@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            /* font-size: 10px; */
+        }
+
+        body {
+            background-color: aqua;
+        }
+
+        fieldset {
+            background-color: antiquewhite;
+            width: 50%;
+            margin: 1em auto;
+            border-radius: 5px;
+            box-shadow: 5px 5px 10px blueviolet;
+        }
+
+        fieldset legend {
+            color: blue;
+            font-size: 2em;
+            margin: 0 1em;
+            font-family: fantasy;
+            letter-spacing: 2px;
+        }
+
+        .infor {
+            margin: 2em 1em;
+            display: flex;
+            align-items: center;
+        }
+
+        label {
+            width: 100px;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 5px 0;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .btn-submit {
+            font-size: 1em;
+            padding: 10px 20px;
+            background-color: aqua;
+            color: white;
+            border: none;
+            margin: 1em 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <div id="demo">Register to system</div>
+        <form action="http://www.google.com" method="post">
+            <div class="infor">
+                <label for="username">User name:</label>
+                <input type="text" name="username" id="username">
+            </div>
+            <div class="infor">
+                <label for="username">Password:</label>
+                <input type="password" id="password">
+            </div>
+            <div class="infor">
+                <label for="username">Password:</label>
+                <input type="password" id="passwordConfirm">
+            </div>
+            <div class="infor">
+                <input class="btn-submit" type="submit" value="Login" id="login">
+                <input class="btn-submit" type="reset" value="Reset" id="reset">
+            </div>
+        </form>
+    </fieldset>
+
+    <!-- <script>
+        document.getElementById("demo").onclick = function () { change() };
+        function change() {
+            document.getElementById("demo").innerHTML = "WELCOME TO BATCH 171";
+        }
+    </script> -->
+
+
+    <script>
+        document.getElementById("login").onclick = function () { return checkLogin() };
+        function checkLogin() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var passwordConfirm = document.getElementById('passwordConfirm').value;
+            if (username, password == "") {
+                alert('Vui lòng điền đầy đủ thông tin!'); return false;
+            }
+            else if (password != passwordConfirm) {
+                alert('Nhap lai mat khau chua dung!'); return false;
+            }
+            else
+                alert("Đăng nhập thành công!");
+                return true;
+        }
+    </script>
+
+</body>
+
+</html>
