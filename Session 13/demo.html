@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <h2>1.	Nhập vào từ bàn phím 1 số nguyên dương n, sau đó in ra từ 1 đến n các số chia hết cho 3</h2>
+    <script>
+        let n;
+        do{
+            n = parseInt(prompt("Nhập vào 1 số nguyên dương: "))
+        }while(n <= 0);
+        for(let i = 1; i <= n; i++)
+        {
+            if(i%3==0) document.write(i + "<br>");
+        }
+    </script> -->
+    <script>
+        //2.	Hãy in ra 10 số nguyên dương đầu tiên chia hết cho 5
+        let count = 0;
+        for(let i = 1;; i++){
+            if(count == 10) break;
+            if(i%5 == 0) {
+                count++;
+                document.write(i + "<br>");
+            }
+        }
+    </script>
+</body>
+
+</html>
