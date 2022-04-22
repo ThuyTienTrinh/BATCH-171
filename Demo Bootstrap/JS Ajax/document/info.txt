@@ -1,0 +1,5 @@
+<h2>Albert Einstein</h2>
+<p>Einstein was born in the German Empire, but moved to Switzerland in 1895</p>
+<p>
+Einstein is best known for developing the theory of relativity, but he also made important contributions to the development of the theory of quantum mechanics.
+</p>

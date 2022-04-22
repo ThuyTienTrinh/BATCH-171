@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Ajax XML Example</h2>
+    <button onclick="loadXML()">Show Price</button>
+    <div id="demo"></div>
+    <script>
+        function loadXML() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function () {
+                const xmlDoc = this.responseXML;
+                const x = xmlDoc.getElementsByTagName("COMPANY");
+                let str = "";
+                for (let i = 0; i < x.length; i++) {
+                    str += x[i].childNodes[0].nodeValue + "<br>";
+                }
+                document.getElementById("demo").innerHTML = str;
+            }
+            xhttp.open("GET", "document/cd_catalog.xml");
+            xhttp.send();
+        }
+
+    </script>
+</body>
+
+</html>

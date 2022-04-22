@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="images/Albert_Einstein_Head.jpg" alt="Einstein"> <br>
+    <button id="btn">Learn more about Einstein</button>
+    <div id="result"></div>
+    <script>
+        var btn = document.getElementById("btn");
+        const xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "document/info.txt");
+
+        // xhttp.onreadystatechange = function () {
+        //     if (xhttp.readyState === 4 & xhttp.status === 200)
+        //         document.getElementById("result").innerHTML = xhttp.responseText;
+        // }
+        xhttp.onload = function(){
+                document.getElementById("result").innerHTML = xhttp.responseText;
+        }
+        btn.addEventListener("click", function () {
+            this.style.display = 'none';
+            xhttp.send();
+        });
+    </script>
+</body>
+
+</html>
