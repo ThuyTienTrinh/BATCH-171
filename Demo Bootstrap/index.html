@@ -139,7 +139,7 @@
     </div>
   </section>
   <div style="height: 500px;"></div>
-  <script>
+  <!-- <script>
     $(document).ready(function () {
       $(".add").click(function () {
         $('#count').html(function (i, val) {
@@ -147,8 +147,20 @@
         });
       });
     });
+  </script> -->
+  <script>
+    var addCart = document.getElementsByClassName("add");
+    var count = 0;
+    for (var i = 0; i < addCart.length; i++) {
+      addCart[i].onclick = function () {
+        count++;
+        document.getElementById("count").innerHTML = count;
+      }
+    }
+
+
+
   </script>
- 
 </body>
 
 </html>
